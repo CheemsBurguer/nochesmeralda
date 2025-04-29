@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog Secreto</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div id="login">
+  <h2>Ingresa la contraseña</h2>
+  <input type="password" id="password" placeholder="Contraseña">
+  <br>
+  <button onclick="checkPassword()">Entrar</button>
+  <p id="error"></p>
+</div>
+
+<div id="blog" style="display: none;">
+  <h1>Bienvenida a nuestra página corazón 📷❤️</h1>
+  <p>Mi vida, ya tenía tiempo queriendo hacer esto, tener un lugar para que pongamos nuestros
+    recuerdos y podamos verlos desde cuaquier lugar, en cualquier momento. Pensé que no había
+    mejor momento para poder estrenarlo que nuestro aniversario mi amor, así que lo primero que
+    quiero colocar en este espacio son las palabras que tengo para decirte en este día tan especial
+    para nosotros.
+    <br>
+    <br><br>
+    ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️<br>
+    29/04/2025
+    <br>
+    <br>
+    Mi vida, mi princesa hermosa, hoy cumplimos 1 añito. Parece que fue ayer cuando nos conocimos,
+    cuando comenzamos a conocernos y me enamoré de la grandiosa, increíble y hermosa mujer que eres.
+    No puedo describir con palabras lo que siento por ti, lo que siento este día y cada momento en que recuerdo
+    todo lo que hemos pasado juntos. Simplemente no existe vocabulario para poder expresar todas las emociones
+    que generas dentro de mí, preciosa. Recuerdo el día en que te conocí, mi amor, recuerdo la primera vez que nos sentamos
+    a platicar, la primera vez que fuimos al cine, que fuimos a comer, cuando nos agarramos la mano por primera vez, cuando
+    te abracé, nuestro primer beso, la primera vez que viniste a mi casa, cuando fui a la tuya,
+    nuestra primera vez, tu cumpleaños, el mío... Recuerdo cada experiencia que hemos vivido y solo me hace estar más
+    seguro de lo que ya sabía: que eres no solo el amor de mi vida, sino de todas mis vidas. Mi compañera de vida, mi mejor
+    amiga, mi novia, mi esposa, mi reina, mi universo, mi todo. Eres mi sueño hecho realidad, lo mejor que me pudo haber
+    pasado, corazón, y no dejaré de agradecer nunca el que nos hayamos conocido.
+    <br><br>
+    Cada día a tu lado es el mejor regalo que se me pudo haber dado, mi amor. Me haces la persona más feliz y amada que jamás haya
+    existido. Quiero compartir esta vida y muchísimas más contigo, corazón. Gracias por cada detallito, cada consideración que tienes conmigo,
+    gracias por ayudarme y preocuparte por mí, corazón. Confío totalmente en ti, mi vida hermosa. Sé que puedo confiarte cada aspecto de mí porque
+    sé que siempre buscarás cuidarme. Eres un angelito caído del cielo. No sé qué hice para merecerte, mi niña preciosa. Nunca cambies, por favor,
+    corazón. Me encantas, me fascinas tal y como eres, eres perfecta en todo sentido y no te cambiaría absolutamente nada. Yo te pertenezco
+    completamente, mi amorcito. Quiero que sepas que yo siempre estaré ahí para ti en cualquier momento y lugar, no importa la situación, porque
+    eres lo más importante en mi vida y siempre veré primero por ti y solo por ti, mi flaquita hermosa.
+    <br><br>
+    Mi amor, se me acaba el lenguaje para poderte decir lo mucho que te amo, y nunca dejaré de recordártelo. Te amo con todo mi ser, mi amor. Te amo
+    con todo lo que soy, con mi alma entera. Te amo de la forma más sincera, pura e intensa que puede haber. Te amo con cada parte de lo que me conforma,
+    te amo como no te puedes imaginar, mi vida. Te amo mucho más allá del infinito. Te amo como las palabras no pueden expresar, mi princesa hermosa. Simplemente
+    TE ADORO, MI VIDA.
+    <br><br>
+    Corazón, espero que disfrutes de este día tanto como yo lo haré. Nunca olvidaré este y todos los días que paso a tu lado, porque eres el mayor regalo que la vida
+    me ha dado. Siempre cuidaré de ti y haré todo por ti, mi corazoncito. Siempre te amaré de la misma forma en que lo hago hoy, y eso nunca cambiará, mi amor. Así que,
+    mi vida, FELIZ PRIMER AÑITO JUNTITOS!!! Hoy voy a consentirte mi reina, hoy y toda la vida corazón. Te amo, te amo cien mil millones de trillones y uno más, mi todo.
+    <br><br>
+    ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️<br>
+  </p>
+
+  <div class="gallery">
+    <div class="polaroid">
+      <img src="images\img1.jpg" alt="Foto 1">
+      
+    </div>
+    <div class="polaroid">
+      <img src="images\img2.jpg" alt="Foto 2">
+      
+    </div>
+    <div class="polaroid">
+      <img src="images\img3.jpg" alt="Foto 3">
+      
+    </div>
+    <div class="polaroid">
+      <img src="images\img4.jpg" alt="Foto 4">
+      
+    </div>
+
+    <div class="gallery">
+        <div class="polaroid">
+          <img src="images\img5.jpg" alt="Foto 1">
+          
+        </div>
+        <div class="polaroid">
+          <img src="images\img6.jpg" alt="Foto 2">
+          
+        </div>
+        <div class="polaroid">
+          <img src="images\img7.jpg" alt="Foto 3">
+          
+        </div>
+        <div class="polaroid">
+          <img src="images\img8.jpg" alt="Foto 4">
+          
+        </div>
+
+  </div>
+</div>
+
+
+
+<script>
+  const correctPassword = "29"; // Cambia la contraseña aquí
+
+  function checkPassword() {
+    const enteredPassword = document.getElementById("password").value;
+
+    if (enteredPassword === correctPassword) {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("blog").style.display = "block";
+      applyRandomRotation();
+    } else {
+      document.getElementById("error").innerText = "Contraseña incorrecta, intenta de nuevo.";
+    }
+  }
+
+  function applyRandomRotation() {
+    const photos = document.querySelectorAll('.polaroid');
+    photos.forEach(photo => {
+      const angle = Math.floor(Math.random() * 21) - 10;
+      photo.style.transform = `rotate(${angle}deg)`;
+    });
+  }
+</script>
+
+</body>
+</html>
