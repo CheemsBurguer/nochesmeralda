@@ -50,24 +50,10 @@
 </div>
 
 <footer>
-  <a href="pagina2.html">Siguiente página →</a>
+  
 </footer>
 
 <script>
-  const correctPassword = "29"; // Cambia la contraseña aquí
-
-  function checkPassword() {
-    const enteredPassword = document.getElementById("password").value;
-
-    if (enteredPassword === correctPassword) {
-      document.getElementById("login").style.display = "none";
-      document.getElementById("blog").style.display = "block";
-      applyRandomRotation();
-    } else {
-      document.getElementById("error").innerText = "Contraseña incorrecta, intenta de nuevo.";
-    }
-  }
-
   function applyRandomRotation() {
     const photos = document.querySelectorAll('.polaroid');
     photos.forEach(photo => {
