@@ -8,42 +8,35 @@
 </head>
 <body>
 
-
 <div id="blog" style="display: block;">
   <h1>Bienvenida a nuestra página corazón 📷❤️</h1>
   <p>Mi vida, ya tenía tiempo queriendo hacer esto, tener un lugar para que pongamos nuestros
-    recuerdos y podamos verlos desde cuaquier lugar, en cualquier momento. Pensé que no había
+    recuerdos y podamos verlos desde cualquier lugar, en cualquier momento. Pensé que no había
     mejor momento para poder estrenarlo que nuestro aniversario mi amor, así que lo primero que
     quiero colocar en este espacio son las palabras que tengo para decirte en este día tan especial
     para nosotros.
-    <br>
     <br><br>
     ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️<br>
     29/04/2025
   </p>
-    <div class="gallery">
-        <div class="polaroid">
-          <img src="images\img5.jpg" alt="Foto 1">
-          
-        </div>
-        <div class="polaroid">
-          <img src="images\img6.jpg" alt="Foto 2">
-          
-        </div>
-        <div class="polaroid">
-          <img src="images\img7.jpg" alt="Foto 3">
-          
-        </div>
-        <div class="polaroid">
-          <img src="images\img8.jpg" alt="Foto 4">
-          
-        </div>
 
+  <div class="gallery">
+    <div class="polaroid">
+      <img src="images/img5.jpg" alt="Foto 1">
+    </div>
+    <div class="polaroid">
+      <img src="images/img6.jpg" alt="Foto 2">
+    </div>
+    <div class="polaroid">
+      <img src="images/img7.jpg" alt="Foto 3">
+    </div>
+    <div class="polaroid">
+      <img src="images/img8.jpg" alt="Foto 4">
+    </div>
   </div>
-
+</div>
 
 <footer>
-  
 </footer>
 
 <script>
@@ -54,6 +47,9 @@
       photo.style.transform = `rotate(${angle}deg)`;
     });
   }
+
+  // Ejecutar la función al cargar la página
+  window.onload = applyRandomRotation;
 </script>
 
 </body>
