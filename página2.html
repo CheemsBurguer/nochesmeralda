@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog Secreto</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div id="login">
+  <h2>Ingresa la contraseña</h2>
+  <input type="password" id="password" placeholder="Contraseña">
+  <br>
+  <button onclick="checkPassword()">Entrar</button>
+  <p id="error"></p>
+</div>
+
+<div id="blog" style="display: none;">
+  <h1>Bienvenida a nuestra página corazón 📷❤️</h1>
+  <p>Mi vida, ya tenía tiempo queriendo hacer esto, tener un lugar para que pongamos nuestros
+    recuerdos y podamos verlos desde cuaquier lugar, en cualquier momento. Pensé que no había
+    mejor momento para poder estrenarlo que nuestro aniversario mi amor, así que lo primero que
+    quiero colocar en este espacio son las palabras que tengo para decirte en este día tan especial
+    para nosotros.
+    <br>
+    <br><br>
+    ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️<br>
+    29/04/2025
+  </p>
+    <div class="gallery">
+        <div class="polaroid">
+          <img src="images\img5.jpg" alt="Foto 1">
+          
+        </div>
+        <div class="polaroid">
+          <img src="images\img6.jpg" alt="Foto 2">
+          
+        </div>
+        <div class="polaroid">
+          <img src="images\img7.jpg" alt="Foto 3">
+          
+        </div>
+        <div class="polaroid">
+          <img src="images\img8.jpg" alt="Foto 4">
+          
+        </div>
+
+  </div>
+</div>
+
+<footer>
+  <a href="pagina2.html">Siguiente página →</a>
+</footer>
+
+<script>
+  const correctPassword = "29"; // Cambia la contraseña aquí
+
+  function checkPassword() {
+    const enteredPassword = document.getElementById("password").value;
+
+    if (enteredPassword === correctPassword) {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("blog").style.display = "block";
+      applyRandomRotation();
+    } else {
+      document.getElementById("error").innerText = "Contraseña incorrecta, intenta de nuevo.";
+    }
+  }
+
+  function applyRandomRotation() {
+    const photos = document.querySelectorAll('.polaroid');
+    photos.forEach(photo => {
+      const angle = Math.floor(Math.random() * 21) - 10;
+      photo.style.transform = `rotate(${angle}deg)`;
+    });
+  }
+</script>
+
+</body>
+</html>
